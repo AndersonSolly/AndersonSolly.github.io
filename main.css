@@ -1,0 +1,17 @@
+header{
+    height: 20vh;
+}
+
+main{
+    height: 80vh;
+}
+
+/* custom bs css */
+
+.w-4{
+    width: 40%;
+}
+
+.w-2{
+    width: 20%;
+}
