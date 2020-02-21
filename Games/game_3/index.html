@@ -1,0 +1,177 @@
+<html>
+
+<head>
+	<title>Fake AI 0.8.39</title>
+	<meta name="author" content="Dahakma">
+	<meta name="description" content="A game made by Dahakma">
+	<meta charset="UTF-8">  <!--  -->
+	<link rel="stylesheet" type="text/css" href="Data/styl.css"></head>
+	<link rel="stylesheet" type="text/css" href="Minigames/minigames.css"></head>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+	<link rel="manifest" href="Images/site.webmanifest">
+</head>
+
+<body>
+
+
+<div id="div_intro">
+	<div id="div_intro_top">
+		Fake AI
+	</div>
+	<div id="div_intro_bot">
+		by Dahakma
+	</div>
+	<div id="div_intro_loading">
+		<div id="div_intro_dot_0" class="div_intro_dot"></div>
+		<div id="div_intro_dot_1" class="div_intro_dot"></div>
+		<div id="div_intro_dot_2" class="div_intro_dot"></div>
+		<div id="div_intro_dot_3" class="div_intro_dot"></div>
+		<div id="div_intro_dot_4" class="div_intro_dot"></div>
+	</div>
+</div>
+
+
+
+<div id="div_main">
+	<div id="div_left"> 
+		<div id="div_player"> </div>
+		
+		<div id="div_attributes">
+		</div>
+		
+		<div id="div_menu">
+			
+			<hr>
+			<span id="display_button" class="button">Focus</span>
+			<span id="transparent_button" class="button">Transparent</span>
+
+			<hr id = "hr_inventory">
+			<span id="inventory_button" class="button">Inventory</span>
+			
+			<hr>
+			<span id="save_button" class="button">Saves</span>
+		<!-- 	<span id="settings_button" class="button">Settings</span>  TODO: to enable also enable eventListener in stuff.js -->
+			<span id="menu_button" class="button">Menu</span>
+			
+			<span id="content_button" class="button">##Content##</span>
+			<span id="walk_button" class="button">##Walkthroug##</span>
+			
+			<hr>
+			<span id="test_clothes" class="button"></span>
+			<span id="test_button" class="button"></span>
+			
+			<!-- 	<span id="trade_button" class="button"></span> -->
+			
+		</div>
+	</div>
+ 
+	
+	
+	<div id="div_right">
+		<div id="div_stats"></div>
+		<div id="div_text"> </div>
+		<div id="div_subtext"> </div>
+	</div>
+</div>
+	
+	
+	
+	
+<script> 
+const superbug = false; //game is in developers mode that won't be shared on Patreon and may include user-unfriendly mess
+const version = "0.8.39"; //version of the game
+const debug = false; 
+
+var PC = {};
+var PCMETA = {};
+var PCGAME = {};
+var SEED;
+ 
+var difficulty;
+</script>
+	
+	
+	
+<!-- LOADING & ASAP -->
+<script src="Data/intro.js"></script> 
+<script>STORAGE.check();</script> 
+<script>INTRO.step();</script><!-- LOADING PROGRESS -->	 
+
+<script> 
+	const div_subtext = document.getElementById("div_subtext");
+	const div_left = document.getElementById("div_left");
+	const div_text = document.getElementById("div_text");
+	const div_stats = document.getElementById("div_stats");
+	const div_attributes = document.getElementById("div_attributes");
+</script>
+
+
+<!-- LIBRARIES & DAD -->
+	<script src="Data/dh.js"></script> 
+
+	<script src="Data/da.js"></script> 
+	<script>INTRO.step();</script><!-- LOADING PROGRESS -->
+
+	<script src="Data/wardrobe.js"></script> 
+	<script src="Data/wardrobe2.js"></script> 
+	<script> 
+		WARDROBE.config = {
+			PC: PC,
+			div: "div_player",
+			experimental: true,
+			british: true,
+		}; 
+		WARDROBE.load(); 
+		
+	</script> 
+	<script>INTRO.step();</script><!-- LOADING PROGRESS -->
+
+
+<!-- ENGINE & THE OTHER IMPORTANT STUFF -->
+	<script src="Data/stuff.js"></script> 
+	<script src="Data/engine.js"></script> 
+
+	<script src="Data/dungeons.js"></script> 
+	<script src="Data/dungeons2.js"></script> 
+	<script src="Data/dungeons3.js"></script> 
+	
+	<script src="Minigames/minigames.js"></script> 
+	<script src="Data/potions.js"></script> 
+	
+	<script>INTRO.step();</script><!-- LOADING PROGRESS -->
+
+
+<!-- THE GAME ITSELF -->
+	<script src="Data/effects.js"></script> 
+	<script src="Data/story.js"></script> 
+	<script src="Data/story2.js"></script> 
+	<script>INTRO.step();</script><!-- LOADING PROGRESS -->
+
+	<!--<script src="Data/lost_city.js"></script> -->
+	
+<script> 
+	const snd_levelUp = new Audio('Images/levelup.wav');
+	var mile = {
+		day: 1,
+	}
+	var att = {}; //character attributes
+	var counter = {}; //various counters
+	var inventory;
+	var game_inventory;
+	var stats;
+</script>
+
+
+<!-- STARTS THE GAME (LATEST SAVE OR MENU) -->
+<script> 
+SAVE.autoload( MENU.start );
+INTRO.done();
+</script>
+
+
+
+</body>
+</html>

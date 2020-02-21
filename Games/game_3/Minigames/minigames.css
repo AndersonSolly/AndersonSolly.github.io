@@ -1,0 +1,662 @@
+/* abc */
+#tang_target{ 
+	z-index: 100;
+	position: absolute;
+	background-color: blue;
+	width: 500;
+	height: 500;
+	top: 0;
+	right: 0;
+}
+
+/*DOESNT WORK*/
+.tang_done{ 
+	cursor:pointer !important;
+	background-color: "hsla(0, 50%, 50%, 1)" !important;
+}
+
+
+
+#tang_cointainer{
+	z-index: 1;
+	width: 500px; 
+	height: 500px; 
+	
+	
+	background-color: "red"; 
+	/*
+	display: flex;
+	flex-direction: row; 
+	*/
+}
+
+#tang_canvas{
+	z-index: 2;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	width: 500px; 
+	height: 500px; 
+	
+	
+	
+	background-color: cyan;
+	
+	
+}
+
+
+
+#tang_curtain{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	width: 500px; 
+	height: 500px; 
+	
+	background-color: black;
+	
+	opacity: 0;
+}
+
+
+#tang_piece_alpha{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	width: 200px; 
+	height: 200px; 
+	background-color: navy;
+	
+	background-image: url("purpleSerpent.gif");
+	
+	/*-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 75%, 50% 75%, 50% 25%, 0 25%);*/
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 75%, 50% 75%, 50% 25%, 0 25%);
+}
+
+/*
+
+https://bennettfeely.com/clippy/
+
+*/
+
+#tang_piece_beta{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	width: 300px; 
+	height: 200px; 
+	background-color: green;
+	
+	background-image: url("purpleSerpent.gif");
+	
+	-webkit-clip-path: polygon(16.5% 50%, 33% 25%, 33% 0, 67% 0, 67% 25%, 100% 25%, 100% 75%, 67% 75%, 67% 100%, 33% 100%, 33% 75%/*, 16.5% 75%*/);
+	clip-path: polygon(16.5% 50%, 33% 25%, 33% 0, 67% 0, 67% 25%, 100% 25%, 100% 75%, 67% 75%, 67% 100%, 33% 100%, 33% 75%/*, 16.5% 75%*/);
+
+}
+
+
+
+#tang_piece_0{
+	width: 200px; 
+	height: 200px; 
+	background-color: navy;
+	clip-path: polygon(0 0, 100% 0%, 0% 100%);
+}
+
+#tang_piece_1{
+	width: 200px; 
+	height: 200px; 
+	background-color: red;
+	clip-path: polygon(0 0, 100% 0%, 0% 100%);
+}
+
+#tang_piece_2{
+	width: 200px; 
+	height: 100px; 
+	background-color: green;
+	clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+}
+
+#tang_piece_3{
+	width: 100px;
+	height: 100px;
+	background-color: lime;
+}
+
+
+ 
+.tang_piece{
+	
+	width: 500px; 
+	height: 500px; 
+	background-color: lime;
+	
+	z-index: 4;
+	position:absolute; /*todo*/
+	cursor:move;
+	/*
+	https://css-tricks.com/using-box-shadows-and-clip-path-together/
+	*/
+	
+	
+	
+/*
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+vertical-align: middle;
+
+*/
+  
+}
+
+
+#tang_cancel{
+	position: relative;
+	z-Index: 5; 
+	/*top: 15;
+	left: 15;*/
+	padding: 10;
+	cursor:pointer;
+	font-weight: bold;
+	font-size: 110%;
+/*	width: 150px; 
+	height: 50px; */
+	/*display: none;*/
+	background-color: "hsl(228, 4%, 70%)";
+}
+	
+#tang_cancel2{
+	position: relative;
+	/*z-Index: 5;
+	top: 15;*/
+	/*right: 0;*/
+	padding: 10;
+	cursor:pointer;
+	font-weight: bold;
+	font-size: 110%;
+/*	width: 150px; 
+	height: 50px; */
+/*	display: none;*/
+	background-color: "hsl(228, 4%, 70%)";
+}
+
+
+	
+.tang_arvak{
+	
+	width: 500px; 
+	height: 500px; 
+	background-color: lime;
+	
+	z-index: 4;
+	position:absolute; /*todo*/
+	cursor:move;
+	/*
+	https://css-tricks.com/using-box-shadows-and-clip-path-together/
+	*/
+	
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.tang_dragged{
+	z-index: 10; /*doesnt work?*/
+	background-color: red !important; /*doesnt work?*/
+	/*box-shadow: 10px 10px 0px black !important; */
+}
+
+.tang_shadow_0{
+
+}
+
+.tang_shadow_1{
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Safari 3-8 */
+	transform: rotate(90deg);
+}
+.tang_shadow_2{
+	-ms-transform: rotate(180deg); /* IE 9 */
+	-webkit-transform: rotate(180deg); /* Safari 3-8 */
+	transform: rotate(180deg);
+}
+.tang_shadow_3{
+	-ms-transform: rotate(270deg); /* IE 9 */
+	-webkit-transform: rotate(270deg); /* Safari 3-8 */
+	transform: rotate(270deg);
+}
+
+
+
+
+.tang_rot_0{
+
+}
+
+.tang_rot_1{
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Safari 3-8 */
+	transform: rotate(90deg);
+}
+.tang_rot_2{
+	-ms-transform: rotate(180deg); /* IE 9 */
+	-webkit-transform: rotate(180deg); /* Safari 3-8 */
+	transform: rotate(180deg);
+}
+.tang_rot_3{
+	-ms-transform: rotate(270deg); /* IE 9 */
+	-webkit-transform: rotate(270deg); /* Safari 3-8 */
+	transform: rotate(270deg);
+}
+
+
+
+
+
+
+
+
+#crystal_cointainer{
+	
+	width: 500px; 
+	height: 500px; 
+	
+	/*background-color: yellow;*/
+	
+	display: flex;
+	flex-direction: row; 
+}
+
+
+#crystal_curtain{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	width: 500px; 
+	height: 500px; 
+	
+	background-color: black;
+	
+	opacity: 0;
+}
+
+
+#crystal_left{
+	/*background-color: black;*/
+	padding: 50px;
+	
+	display: flex;
+	flex-direction: column; 
+}
+/*
+#crystal_out{
+	margin: 0 auto;
+	width: 100px; 
+	height: 100px;
+	border-radius: 50px;	
+	
+}
+*/
+
+#crystal_right{
+	/*background-color: black;*/
+	padding: 50px;
+	
+	display: flex;
+	flex-direction: column; 
+}
+
+
+.crystal_inp{
+	cursor:pointer;
+	
+	margin: 10px;
+	width: 100px; 
+	height: 20px;
+	border-radius: 40px;
+
+}
+
+
+
+.crystal_inp_green{
+	background-color: lime;
+	box-shadow: 0px 0px 10px lime;
+}
+.crystal_inp_green:hover{
+	box-shadow: 0px 0px 16px lime;
+}		
+	
+	
+.crystal_inp_red{
+	background-color: red;
+	box-shadow: 0px 0px 10px red;
+}
+.crystal_inp_red:hover{
+	box-shadow: 0px 0px 16px red;
+}	
+	
+.crystal_inp_blue{
+	background-color: blue;
+	box-shadow: 0px 0px 10px blue;
+}
+.crystal_inp_blue:hover{
+	box-shadow: 0px 0px 16px blue;
+}
+
+.crystal_inp_yellow{
+	background-color: yellow;
+	box-shadow: 0px 0px 10px yellow;
+}
+.crystal_inp_yellow:hover{
+	box-shadow: 0px 0px 16px yellow;
+}
+
+.crystal_inp_cyan{
+	background-color: cyan;
+	box-shadow: 0px 0px 10px cyan;
+}
+.crystal_inp_cyan:hover{
+	box-shadow: 0px 0px 15px cyan;
+}
+
+.crystal_inp_orange{
+	background-color: orange;
+	box-shadow: 0px 0px 10px orange;
+}
+.crystal_inp_orange:hover{
+	box-shadow: 0px 0px 15px orange;
+}
+
+.crystal_inp_purple{
+	background-color: purple;
+	box-shadow: 0px 0px 10px purple;
+}
+.crystal_inp_purple:hover{
+	box-shadow: 0px 0px 15px purple;
+}
+
+.crystal_out{
+	
+	
+	margin: 10px;
+	width: 100px; 
+	height: 20px;
+	border-radius: 40px;
+
+}
+
+.crystal_out_dark{
+	background-color: hsla(0, 0%, 30%, 1);
+}
+.crystal_out_active{
+	cursor:pointer;
+	background-color: gray;
+}
+.crystal_out_white{
+	background-color: white;
+	box-shadow: 0px 0px 20px white;
+}
+/*
+
+.crystal_out_inactive{
+	background-color: white;
+	box-shadow: 0px 0px 6px;
+}
+.crystal_out_active{
+	box-shadow: 0px 0px 30px;
+}	
+*/
+
+/*
+.crystal_out_active:hover{
+	box-shadow: 0px 0px 15px;
+}	
+*/	
+	
+/* abc */
+
+#abc_cointainer{
+
+}
+
+#abc_botik{
+	 
+	display: flex;
+	flex-direction: column; 
+}
+
+
+#abc_topik{
+/*	background-color: white; */
+	display: flex;
+	flex-direction: column; 
+}
+
+.abc_row{
+	padding:14px;
+	/*background-color: blue; */
+	display: flex;
+	flex-direction: row;
+}
+
+.abc_row_2{
+	padding:1px;
+	/*background-color: blue; */
+	display: flex;
+	flex-direction: row;
+}
+
+.abc_inputy{
+	padding:5px;
+	/*background-color: blue; */
+	display: flex;
+	flex-direction: column;
+}
+
+.abc_inputfield{
+	padding-top:14px;
+}
+
+.abc_symbol{
+	padding:2px;
+	/*background-color: blue; */
+	font-size:20px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+/* BULLS AND COWS HACKING MINIGAME: */
+
+
+.bull_column{
+ 
+/*
+	height:100%;
+	width:100%;
+	
+	left:10%;
+	right:10%;
+	*/
+	
+	background-color:  hsla(228, 4%, 80%, 1);
+	
+	display: flex;
+	flex-direction: column
+	 
+}
+.bull_row{
+ 
+/*
+	height:100%;
+	width:100%;
+	
+	left:10%;
+	right:10%;
+	*/
+	
+	background-color:  hsla(228, 4%, 80%, 1);
+	
+	display: flex;
+	flex-direction: row
+	 
+}
+
+
+
+
+.bull_row_even{
+
+
+	
+	background-color:  gray;
+	
+	display: flex;
+	flex-direction: row
+	 
+}
+.bull_row_odd{
+
+  
+	
+	background-color: white; 
+	
+	display: flex;
+	flex-direction: row
+	 
+}
+
+.bull_inbox{
+	height:40px;
+	width:40px;
+	
+	text-align:center;
+	font-size: 30px;
+	
+	margin:5px;
+	padding:5px;
+	/*font-weight: bold;*/
+	/*background-color: white; */
+	cursor:pointer;
+}
+
+.bull_outputed{
+	display: flex;
+	flex-direction: column;
+}
+
+/*
+.bull_outbox_3{
+	
+	background-color:lime;
+}
+.bull_outbox_2{
+	
+	background-color:red;
+}
+ */
+.bull_outbox{
+	height:25%;
+}
+
+.bull_green{
+	background-color: lime; 
+}
+
+.bull_yellow{
+	background-color: yellow; 
+}
+
+.bull_red{
+	background-color: red; 
+}
+
+
+.bull_num_button{
+	height:50px;
+	width:50px;
+	padding:5px;
+	margin:5px;
+	text-align:center;
+	font-size: 40px;
+	/*font-weight: bold;*/
+	background-color: white; 
+	cursor:pointer;
+	
+	border-radius: 10px;
+}
+.bull_num_button:hover{
+	background-color: red; 
+}
+
+#bull_topik{
+	position: relative;
+	
+	padding:20px;
+/*
+	height:100%;
+	width:100%;
+	
+	left:10%;
+	right:10%;
+	*/
+	
+	background-color:  hsla(228, 4%, 80%, 1);
+	
+	display: flex;
+ 
+	 
+}
+
+
+#bull_botik{
+	position: relative;
+	
+	padding:20px;
+/*
+	height:100%;
+	width:100%;
+	
+	left:10%;
+	right:10%;
+	*/
+	
+	background-color:  hsla(228, 4%, 80%, 1);
+	
+	display: flex;
+	 
+	 
+}
+
+
+#bull_cointainer{
+	position: relative;
+
+	height:1000px;
+	width:400px;
+	/*
+	left:10%;
+	right:10%;
+	*/
+	
+	background-color: navy; 
+	
+	display: flex;
+	flex-direction: row;
+	align-items: strech;
+}
